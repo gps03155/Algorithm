@@ -6,7 +6,7 @@ class Solution {
         String answer = "";
         
         Map<Object, Long> count = Arrays.asList(participant).stream().collect(Collectors.groupingBy(m -> m, Collectors.counting()));
-		Map<Object, Long> competionCount =  Arrays.asList(completion).stream().collect(Collectors.groupingBy(m -> m, Collectors.counting()));
+	Map<Object, Long> competionCount =  Arrays.asList(completion).stream().collect(Collectors.groupingBy(m -> m, Collectors.counting()));
         
         for(Object key : count.keySet()){
             if(competionCount.containsKey(key)){
