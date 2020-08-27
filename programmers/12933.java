@@ -6,11 +6,11 @@ class Solution {
         String num = "";
         
         String[] arr = String.valueOf(n).split("");
-		Arrays.sort(arr, Collections.reverseOrder());
+	Arrays.sort(arr, Collections.reverseOrder());
 		
-		for(String str : arr) {
-			num += str;
-		}
+	for(String str : arr) {
+		num += str;
+	}
         
         answer = Long.valueOf(num);
         
