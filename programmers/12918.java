@@ -9,11 +9,11 @@ class Solution {
                 return false;
             }
             
-			int num = Integer.parseInt(s);
-		}
-		catch(NumberFormatException e) {
-			answer = false;
-		}
+	    int num = Integer.parseInt(s);
+	}
+	catch(NumberFormatException e) {
+	    answer = false;
+	}
         
         return answer;
     }
