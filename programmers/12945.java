@@ -9,7 +9,7 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         
-		// answer = fibo(n);
+	// answer = fibo(n);
         int first = 1;
         int second = 0;
         
