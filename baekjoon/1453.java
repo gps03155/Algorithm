@@ -14,7 +14,6 @@ public class Main{
 	for(int i = 0; i < num; i++) {
 		int pos = Integer.parseInt(st.nextToken());
 			
-			
 		if(seatArr[pos] != 0) fail++;
 		else seatArr[pos] = 1;
 	}
