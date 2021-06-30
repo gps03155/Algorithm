@@ -18,6 +18,6 @@ public class Main {
 			sum += Long.parseLong(sb.reverse().toString());
 		}
 	
-        System.out.println(Long.parseLong(new StringBuffer(String.valueOf(sum)).reverse().toString()));
+        	System.out.println(Long.parseLong(new StringBuffer(String.valueOf(sum)).reverse().toString()));
     }
 }
