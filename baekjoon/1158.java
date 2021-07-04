@@ -17,7 +17,7 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
 		
-    // 1. LinkedList
+    		// 1. LinkedList
 		List<Integer> num = new LinkedList<>();
 		
 		for(int i=1; i<n+1; i++) {
@@ -40,8 +40,8 @@ public class Main {
 		
 		System.out.println("<" + String.join(", ", answer) + ">");
     
-    // 2. Queue
-    Queue<Integer> queue = new LinkedList<>();
+    		// 2. Queue
+    		Queue<Integer> queue = new LinkedList<>();
 		List<String> answer2 = new ArrayList<>();
 		
 		for(int i=1; i<n+1; i++) {
