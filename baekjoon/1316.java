@@ -33,7 +33,7 @@ public class Main {
 					}
 					else {
 						isGroup = false;
-                        break;
+                       	 			break;
 					}
 				}
 				
