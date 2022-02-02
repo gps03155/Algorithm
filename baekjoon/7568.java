@@ -22,11 +22,11 @@ public class Main {
 		}
 
 		for (int i = 0; i < test; i++) {
-      // rank 초기화
+   		   	// rank 초기화
 			int rank = 1;
 			
 			for (int j = 0; j < test; j++) {
-        // weight && height 비교 (큰 값 존재할 경우 rank 증가)
+        			// weight && height 비교 (큰 값 존재할 경우 rank 증가)
 				if(person[j][0] > person[i][0] && person[j][1] > person[i][1]) {
 					rank++;
 				}
