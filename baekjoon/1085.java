@@ -14,31 +14,38 @@ public class Main {
 		Integer w = Integer.parseInt(st.nextToken());
 		Integer h = Integer.parseInt(st.nextToken());
 		
-		int halfW = w / 2;
-		int halfH = h / 2;
-		int result = 0;
+//		code1.
+		int xMin = Math.min(x, w -x);
+		int yMin = Math.min(y, h -y);
 		
-		// 1사분면
-		if(x <= halfW && y >= halfH) {
-			result = Math.min(x - 0, h - y);
-		}
+		System.out.println(Math.min(xMin, yMin));
 		
-		// 2사분면
-		if(x > halfW && y > halfH) {
-			result = Math.min(w - x, h - y);
-		}
-		
-		// 3사분면
-		if(x < halfW && y < halfH) {
-			result = Math.min(x - 0, y - 0);
-			
-		}
-		
-		// 4사분면
-		if(x >= halfW && y <= halfH) {
-			result = Math.min(w - x, y-0);
-		}
-		
-		System.out.println(result);
+//		code2. 복잡하게 생각했던 코드 
+//		int halfW = w / 2;
+//		int halfH = h / 2;
+//		int result = 0;
+//		
+//		// 1사분면
+//		if(x <= halfW && y >= halfH) {
+//			result = Math.min(x - 0, h - y);
+//		}
+//		
+//		// 2사분면
+//		if(x > halfW && y > halfH) {
+//			result = Math.min(w - x, h - y);
+//		}
+//		
+//		// 3사분면
+//		if(x < halfW && y < halfH) {
+//			result = Math.min(x - 0, y - 0);
+//			
+//		}
+//		
+//		// 4사분면
+//		if(x >= halfW && y <= halfH) {
+//			result = Math.min(w - x, y-0);
+//		}
+//		
+//		System.out.println(result);
 	}
 }
