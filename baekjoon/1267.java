@@ -1,43 +1,32 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        
-		Scanner sc = new Scanner(System.in);
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Integer num = Integer.parseInt(br.readLine());
 		
-		int num = sc.nextInt();
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int yTime = 30;
-		int mTime = 60;
+		int yPrice = 0, mPrice = 0;
 		
-		int yPrice = 10;
-		int mPrice = 15;
-		
-		int ySum = 0;
-		int mSum = 0;
-		
-		for(int i=0;i<num;i++) {
-			int time = sc.nextInt();
+		while(st.hasMoreTokens()) {
+			Integer time = Integer.parseInt(st.nextToken());
 			
-			if(time/yTime == 0) {
-				ySum += yPrice;
-			}
-			
-			if(time/mTime == 0) {
-				mSum += mPrice;
-			}
-			
-			if(time/yTime > 0) {
-				ySum += (yPrice * (time/yTime + 1));
-			}
-			
-			if(time/mTime > 0) {
-				mSum += (mPrice * (time/mTime + 1));
-			}
+			yPrice += (time / 30);
+			if(time % 30 >= 0) yPrice++;
+
+			mPrice += (time / 60);
+			if(time % 60 >= 0) mPrice++;
 		}
 		
-		if(ySum < mSum) System.out.println("Y " + ySum);
-		if(mSum < ySum) System.out.println("M " + mSum);
-		if(ySum == mSum) System.out.println("Y M " + ySum);
-    }
+		yPrice *= 10;
+		mPrice *= 15;
+		
+		if(mPrice < yPrice) System.out.println("M " + mPrice);
+		else if(yPrice < mPrice) System.out.println("Y " + yPrice);
+		else System.out.println("Y M " + yPrice);
+	}
 }
