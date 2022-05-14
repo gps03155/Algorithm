@@ -8,7 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
     
-    // code1.
+    		// code1.
 		int num1 = Integer.parseInt(st.nextToken()) - 1;
 		int num2 = Integer.parseInt(st.nextToken()) - 1;
 
@@ -17,8 +17,8 @@ public class Main {
 
 		System.out.println(x + y);
     
-    // code2.
-    int num1 = Integer.parseInt(st.nextToken());
+		// code2.
+    		int num1 = Integer.parseInt(st.nextToken());
 		int num2 = Integer.parseInt(st.nextToken());
 
 		int numRow1 = 0, numCol1 = 0;
