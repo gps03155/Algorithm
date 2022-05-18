@@ -13,11 +13,6 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 		
-		if(n == 1 && m == 1) {
-			System.out.println(0);
-		}
-		else {
-			System.out.println(n*m -1);
-		}
+		System.out.println(n*m -1);
 	}
 }
