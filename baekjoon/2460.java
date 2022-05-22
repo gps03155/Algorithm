@@ -21,7 +21,7 @@ public class Main {
 			people -= out;
 			people += in;
 			
-            max = Math.max(people, max);
+            		max = Math.max(people, max);
 		}
 		
 		System.out.println(max);
