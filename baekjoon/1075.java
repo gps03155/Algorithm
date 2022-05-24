@@ -7,17 +7,11 @@ public class Main {
 		String n = sc.nextLine();
 		int f = sc.nextInt();
 		int num = Integer.parseInt(n.substring(0, n.length() - 2) + "0".repeat(2));
-		int answer = 0;
 		
-		while(true) {
-			if(num % f == 0) {
-				answer = num;
-				break;
-			}
-			
+		while(num % f != 0) {
 			num++;
 		}
 		
-		System.out.println(String.format("%d%d", answer/10 % 10, answer % 10));
+		System.out.printf("%02d", num % 100);
 	}
 }
