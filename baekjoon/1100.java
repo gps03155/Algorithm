@@ -10,15 +10,8 @@ public class Main {
 		for (int i = 0; i < 8; i++) {
 			String[] cols = br.readLine().split("");
 
-			for (int j = 0; j < cols.length; j++) {
-				if("F".equals(cols[j])) {
-					if(i % 2 == 0) {
-						if (j % 2 == 0) count++;
-					}
-					else {
-						if(j % 2 != 0) count++;
-					}
-				}
+			for (int j = i % 2; j < cols.length; j+=2) {
+				if("F".equals(cols[j])) count++;
 			}
 		}
 		
