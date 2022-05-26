@@ -6,19 +6,18 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int test = Integer.parseInt(br.readLine());
-		int[] ascii = new int[123];
+		int[] ascii = new int[26];
 		
 		for(int i=0; i<test; i++) {
 			String name = br.readLine();
-			int count = ascii[name.charAt(0)] + 1;
-			ascii[name.charAt(0)] = count;
+			ascii[name.charAt(0) - 97]++;
 		}
 		
 		StringBuilder sb = new StringBuilder();
 		
-		for(int i=97; i<ascii.length; i++) {
+		for(int i=0; i<ascii.length; i++) {
 			if(ascii[i] >= 5) {
-				sb.append((char)i);
+				sb.append((char)(i + 97));
 			}
 		}
 		
