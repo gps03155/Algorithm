@@ -14,8 +14,8 @@ public class Main {
 		for(int i=0; i<student; i++) {
 			int period = sc.nextInt();
 			
-			for(int j=0; j<=endTime; j+=period) {
-				if(j > 0 && !answer[j]) {
+			for(int j=period; j<=endTime; j+=period) {
+				if(!answer[j]) {
 					answer[j] = true;
 					count++;
 				}
