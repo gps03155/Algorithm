@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String[] word1= br.readLine().split("");
-		String[] word2 = br.readLine().split("");
+	    String[] word1= br.readLine().split("");
+	    String[] word2 = br.readLine().split("");
 		
 	    List<String> list1 = new ArrayList<>(Arrays.asList(word1));
 	    List<String> list2 = new ArrayList<>(Arrays.asList(word2));
