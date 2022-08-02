@@ -24,14 +24,14 @@ public class Main {
 	    		String s2 = it2.next();
 	    		
 	    		if(s1.equals(s2)) {
-	    			it2.remove();
-	    			isCheck = true;
-	    			break;
+	    		    it2.remove();
+	    		    isCheck = true;
+	    		    break;
 	    		}
 	    	}
 	    	
 	    	if(isCheck) {
-	    		it.remove();
+	    	    it.remove();
 	    	}
 	    }
 	    
