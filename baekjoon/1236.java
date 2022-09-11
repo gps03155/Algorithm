@@ -1,9 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -24,7 +21,7 @@ public class Main {
 			}
 		}
 		
-		List<Integer> rowSec = new ArrayList<>();
+		int rowCnt = 0;
 		
 		for(int i=0; i<row; i++) {
 			Boolean isSecurity = false;
@@ -36,11 +33,11 @@ public class Main {
 			}
 			
 			if(!isSecurity) {
-				rowSec.add(i);
+				rowCnt++;
 			}
 		}
 		
-		List<Integer> colSec = new ArrayList<>();
+		int colCnt = 0;
 		
 		for(int i=0; i<col; i++) {
 			Boolean isSecurity = false;
@@ -52,10 +49,10 @@ public class Main {
 			}
 			
 			if(!isSecurity) {
-				colSec.add(i);
+				colCnt++;
 			}
 		}
 		
-		System.out.println(Math.max(rowSec.size(), colSec.size()));
+		System.out.println(Math.max(rowCnt, colCnt));
 	}
 }
