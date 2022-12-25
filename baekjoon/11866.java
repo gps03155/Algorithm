@@ -15,41 +15,25 @@ public class Main {
 		int k = Integer.parseInt(st.nextToken());
 		
 		Queue<Integer> queue = new LinkedList<>();
+		
+		for(int i=1; i<=n; i++) {
+			queue.offer(i);
+		}
+		
 		StringBuilder builder = new StringBuilder("<");
 		
-		if(k == 1) {
-			for(int i=1; i<=n; i++) {
-				builder.append(i);
-				
-				if(i != n) {
-					builder.append(", ");
-				}
-			}
-			
-			builder.append(">");
-		}
-		else {
-			for(int i=1; i<=n; i++) {
-				queue.offer(i);
-			}
-			
-			int index = 0;
-			
-			while(!queue.isEmpty()) {
-				if(index == k - 1) {
+		while(!queue.isEmpty()) {
+			for(int i=0; i<k; i++) {
+				if(i == k - 1) {
 					builder.append(queue.poll());
-					
-					if(queue.isEmpty()) {
-						builder.append(">");
-						break;
-					}
-					builder.append(", ");
-					index = 0;
 				}
-				
-				queue.offer(queue.poll());
-				index++;
+				else {
+					queue.offer(queue.poll());
+				}
 			}
+			
+			if(queue.isEmpty()) builder.append(">");
+			else builder.append(", ");
 		}
 		
 		System.out.println(builder.toString());
