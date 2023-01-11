@@ -27,14 +27,7 @@ public class Main {
 				board[i][j] = board[i - 1][j - 1] + board[i - 1][j];
 			}
 		}
-
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				if (i + 1 == n && j + 1 == k) {
-					System.out.println(board[i][j]);
-					break;
-				}
-			}
-		}
+		
+		System.out.println(board[n-1][k-1]);
 	}
 }
