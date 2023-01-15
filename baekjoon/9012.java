@@ -8,6 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 
+		// 1. Stack
 		Stack<String> stack = new Stack<>();
 
 		for (int i = 0; i < n; i++) {
@@ -37,6 +38,17 @@ public class Main {
 
 			stack.clear();
 			System.out.println(isVPS ? "YES" : "NO");
+		}
+		
+		// 2. replace
+		for (int i = 0; i < n; i++) {
+			String ps = br.readLine();
+			
+			while(ps.contains("()")) {
+				ps = ps.replace("()", "");
+			}
+			
+			System.out.println(ps.isEmpty()? "YES" : "NO");
 		}
 	}
 }
