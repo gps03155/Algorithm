@@ -10,16 +10,13 @@ public class Main {
 		String[] words = new String[s.length()];
 
 		for (int i = 0; i < words.length; i++) {
-			words[i] = s.substring(i, words.length);
+			words[i] = s.substring(i);
 		}
 
 		Arrays.sort(words);
 
-		StringBuilder sb = new StringBuilder();
 		for (String word : words) {
-			sb.append(word).append("\n");
+			System.out.println(word);
 		}
-
-		System.out.println(sb.toString());
 	}
 }
