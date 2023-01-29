@@ -13,10 +13,8 @@ public class Main {
         int cnt = 0;
         for (int i = nums.length - 1; i > 0; i--) {
             if (nums[i - 1] >= nums[i]) {
-                while (nums[i - 1] >= nums[i]) {
-                    nums[i - 1]--;
-                    cnt++;
-                }
+                cnt += nums[i-1] - nums[i] + 1;
+                nums[i-1] = nums[i] -1;
             }
         }
 
