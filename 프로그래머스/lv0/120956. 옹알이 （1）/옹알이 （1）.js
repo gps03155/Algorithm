@@ -1,14 +1,11 @@
 function solution(babbling) {
+   const regex = /(aya|ye|woo|ma)/g;
+
     let cnt = 0;
-    const words = ["aya", "ye", "woo", "ma"];
-
     for (let val of babbling) {
-      for (let word of words) {
-        val = val.replace(word, " ");
-      }
-
-      if (!val.trim().length) cnt++;
+      val = val.replaceAll(regex, "");
+      if (!val.length) cnt++;
     }
-
+    
     return cnt;
 }
