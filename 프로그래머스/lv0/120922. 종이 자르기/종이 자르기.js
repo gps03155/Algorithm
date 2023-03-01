@@ -1,6 +1,4 @@
 function solution(M, N) {
-    const row = M - 1;
-    const col = (N - 1) * M;
-    
-    return row + col;
+    // M - 1 + (N - 1) * M => M * N - 1
+    return M * N - 1;
 }
