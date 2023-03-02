@@ -8,11 +8,6 @@ public class Main {
         long score = sc.nextLong();
         int p = sc.nextInt();
 
-        if (n == 0) {
-            System.out.println(1);
-            return;
-        }
-
         long[] scores = new long[n];
         for (int i = 0; i < n; i++) {
             scores[i] = sc.nextLong();
@@ -30,8 +25,6 @@ public class Main {
                     break;
                 }
             }
-
-            if (rank == 0) rank = p;
         }
 
         System.out.println(rank);
