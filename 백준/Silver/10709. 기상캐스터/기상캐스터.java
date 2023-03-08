@@ -25,11 +25,7 @@ public class Main {
                 } else if (cha == '.') {
                     sky[i][j] = -1;
                 }
-            }
-        }
 
-        for (int i = 0; i < h; i++) {
-            for (int j = 0; j < w; j++) {
                 System.out.print(sky[i][j] + " ");
             }
             System.out.println();
