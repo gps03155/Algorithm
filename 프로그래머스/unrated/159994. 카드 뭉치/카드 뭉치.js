@@ -1,18 +1,10 @@
 function solution(cards1, cards2, goal) {
     for (let item of goal) {
-      let isGoal = false;
-
       if (cards1[0] === item) {
         cards1.shift();
-        isGoal = true;
-      }
-
-      if (cards2[0] === item) {
+      } else if (cards2[0] === item) {
         cards2.shift();
-        isGoal = true;
-      }
-
-      if (!isGoal) {
+      } else {
         return "No";
       }
     }
