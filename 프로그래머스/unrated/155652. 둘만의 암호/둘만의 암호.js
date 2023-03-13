@@ -4,11 +4,7 @@ function solution(s, skip, index) {
       const arr = [];
       let charIndex = 1;
       while (arr.length < index) {
-        const ascii =
-          item.charCodeAt(0) + charIndex > 122
-            ? 97 + (item.charCodeAt(0) + charIndex - 123)
-            : item.charCodeAt(0) + charIndex;
-
+        const ascii = item.charCodeAt(0) + charIndex;
         const alpha = String.fromCharCode(97 + ((ascii - 97) % 26));
 
         if (!skip.includes(alpha)) {
