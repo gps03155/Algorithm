@@ -3,12 +3,12 @@ function solution(cards1, cards2, goal) {
       let isGoal = false;
 
       if (cards1[0] === item) {
-        cards1.splice(0, 1);
+        cards1.shift();
         isGoal = true;
       }
 
       if (cards2[0] === item) {
-        cards2.splice(0, 1);
+        cards2.shift();
         isGoal = true;
       }
 
