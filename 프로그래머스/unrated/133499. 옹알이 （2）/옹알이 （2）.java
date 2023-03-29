@@ -4,13 +4,12 @@ class Solution {
         int count = 0;
         for (int i = 0; i < babbling.length; i++) {
             String babble = babbling[i];
-
             if (Pattern.matches(".*((aya){2}|(ye){2}|(woo){2}|(ma){2}).*", babble)) {
                 continue;
             }
 
-            while (babble.contains("aya") || babble.contains("ye") || babble.contains("woo") || babble.contains("ma")) {
-                babble = babble.replaceFirst("(aya|ye|woo|ma)", " ");
+            while (babble.matches(".*(aya|ye|woo|ma).*")) {
+                babble = babble.replaceAll("(aya|ye|woo|ma)", " ");
             }
 
             if (babble.trim().isEmpty()) {
