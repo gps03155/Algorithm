@@ -10,7 +10,6 @@ class Solution {
         int answer = 0;
 
         for (int i = 0; i < s.length(); i++) {
-            int count1 = 0, count2 = 0, count3 = 0;
             String str = String.join("", deque);
             Stack<String> stack = new Stack<>();
 
