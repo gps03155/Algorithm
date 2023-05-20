@@ -13,15 +13,9 @@ public class Main {
 
         int count = 0, next = 0;
         for (int i = 0; i < milks.length; i++) {
-            if (milks[i] == 0 && milks[i] == next) {
+            if (milks[i] == next) {
                 count++;
-                next = 1;
-            } else if (milks[i] == 1 && milks[i] == next) {
-                count++;
-                next = 2;
-            } else if (milks[i] == 2 && milks[i] == next) {
-                count++;
-                next = 0;
+                next = (next + 1) % 3;
             }
         }
 
