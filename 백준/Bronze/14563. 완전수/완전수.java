@@ -18,7 +18,7 @@ public class Main {
 
             if (sum == n) System.out.println("Perfect");
             else if (sum < n) System.out.println("Deficient");
-            else if (sum > n) System.out.println("Abundant");
+            else System.out.println("Abundant");
         }
     }
 }
