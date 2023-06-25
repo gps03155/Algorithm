@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,19 +13,20 @@ public class Main {
             arr[i + 1] = sc.nextInt();
         }
 
-        Set<Integer> list = new HashSet<>();
+        boolean[] rooms = new boolean[w + 1];
         for (int i = arr.length - 1; i >= 0; i--) {
             for (int j = i - 1; j >= 0; j--) {
-                list.add(arr[i] - arr[j]);
+                if (!rooms[arr[i] - arr[j]]) {
+                    rooms[arr[i] - arr[j]] = true;
+                }
             }
         }
 
-        List<Integer> result = new ArrayList<>(list);
-        Collections.sort(result);
-
         StringBuilder sb = new StringBuilder();
-        for (int num : result) {
-            sb.append(num).append(" ");
+        for (int i = 0; i < rooms.length; i++) {
+            if (rooms[i]) {
+                sb.append(i).append(" ");
+            }
         }
         System.out.println(sb.toString());
     }
