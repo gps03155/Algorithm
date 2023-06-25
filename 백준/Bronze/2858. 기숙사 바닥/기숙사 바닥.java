@@ -13,7 +13,7 @@ public class Main {
             for (int j = 3; j <= width; j++) {
                 if (i * j > width) break;
                 if (i * j == width) {
-                    if (r == (i * 2) + (j - 2) * 2) {
+                    if (b == (i - 2) * (j - 2)) {
                         max = Math.max(i, j);
                         min = Math.min(i, j);
                         break;
