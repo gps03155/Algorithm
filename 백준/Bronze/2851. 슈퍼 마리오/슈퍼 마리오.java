@@ -9,18 +9,15 @@ public class Main {
             nums[i] = sc.nextInt();
         }
 
-        int sum = nums[0];
-        for (int j = 1; j < nums.length; j++) {
-            if (sum + nums[j] > 100) {
-                if (100 - sum >= sum + nums[j] - 100) {
-                    sum += nums[j];
-                }
-                break;
-            }
-
+        int max = 0;
+        int sum = 0;
+        for (int j = 0; j < nums.length; j++) {
             sum += nums[j];
+            if (Math.abs(sum - 100) <= Math.abs(100 - max)) {
+                max = sum;
+            }
         }
 
-        System.out.println(sum);
+        System.out.println(max);
     }
 }
