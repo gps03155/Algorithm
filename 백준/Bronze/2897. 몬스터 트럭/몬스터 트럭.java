@@ -6,13 +6,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
         int c = sc.nextInt();
-        String[][] board = new String[r][c];
+        char[][] board = new char[r][c];
 
         for (int i = 0; i < r; i++) {
-            String[] arr = sc.next().split("");
-            for (int j = 0; j < c; j++) {
-                board[i][j] = arr[j];
-            }
+            board[i] = sc.next().toCharArray();
         }
 
         int[] counts = new int[5];
@@ -20,28 +17,14 @@ public class Main {
             for (int j = 0; j < c - 1; j++) {
                 int count = 0;
 
-                if ("#".equals(board[i][j]) ||
-                        "#".equals(board[i][j + 1]) ||
-                        "#".equals(board[i + 1][j]) ||
-                        "#".equals(board[i + 1][j + 1])) {
+                if (board[i][j] == '#' || board[i][j + 1] == '#' || board[i + 1][j] == '#' || board[i + 1][j + 1] == '#') {
                     continue;
                 }
 
-                if ("X".equals(board[i][j])) {
-                    count++;
-                }
-
-                if ("X".equals(board[i + 1][j])) {
-                    count++;
-                }
-
-                if ("X".equals(board[i][j + 1])) {
-                    count++;
-                }
-
-                if ("X".equals(board[i + 1][j + 1])) {
-                    count++;
-                }
+                if (board[i][j] == 'X') count++;
+                if (board[i][j + 1] == 'X') count++;
+                if (board[i + 1][j] == 'X') count++;
+                if (board[i + 1][j + 1] == 'X') count++;
 
                 counts[count]++;
             }
