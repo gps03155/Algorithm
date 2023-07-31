@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            int sum = 0;
+            int min = Integer.MAX_VALUE;
+
+            for (int j = 0; j < 7; j++) {
+                int num = sc.nextInt();
+                if (num % 2 == 0) {
+                    sum += num;
+                    min = Math.min(min, num);
+                }
+            }
+
+            System.out.println(sum + " " + min);
+        }
+    }
+}
