@@ -14,16 +14,20 @@ public class Main {
         List<String> korea = new ArrayList<>(Arrays.asList("K", "O", "R", "E", "A"));
 
         for (String str : s.split("")) {
-            yonsei.remove(str);
-            korea.remove(str);
+            if (str.equals(yonsei.get(0))) {
+                yonsei.remove(str);
+            }
+            if (str.equals(korea.get(0))) {
+                korea.remove(str);
+            }
 
             if (yonsei.isEmpty()) {
                 System.out.println("YONSEI");
-                break;
+                return;
             }
             if (korea.isEmpty()) {
                 System.out.println("KOREA");
-                break;
+                return;
             }
         }
     }
