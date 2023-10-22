@@ -21,11 +21,10 @@ public class Main {
         int index = 1;
         Iterator<Integer> it = nums.iterator();
         while (it.hasNext()) {
-            if (it.next() != index) {
-                result++;
-                it.remove();
-            } else {
+            if (it.next() == index) {
                 index++;
+            } else {
+                result++;
             }
         }
 
