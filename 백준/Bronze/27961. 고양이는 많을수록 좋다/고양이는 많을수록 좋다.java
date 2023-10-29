@@ -8,14 +8,9 @@ public class Main {
         long n = Long.parseLong(br.readLine());
         int count = 0;
 
-        while (n > 0) {
-            long pow = (long) Math.pow(2, count++);
-
-            if (pow >= n) {
-                break;
-            }
+        while (Math.pow(2, count) < n) {
+            count++;
         }
-
-        System.out.println(count);
+        System.out.println(n == 0 ? 0 : count + 1);
     }
 }
