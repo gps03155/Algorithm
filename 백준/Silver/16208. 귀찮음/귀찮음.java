@@ -10,14 +10,14 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         int[] sticks = new int[n];
 
-        int total = 0;
+        long total = 0;
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
             sticks[i] = Integer.parseInt(st.nextToken());
             total += sticks[i];
         }
 
-        int result = 0;
+        long result = 0;
         for (int stick : sticks) {
             total -= stick;
             result += total * stick;
