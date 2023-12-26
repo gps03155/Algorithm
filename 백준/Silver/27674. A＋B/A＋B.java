@@ -14,8 +14,8 @@ public class Main {
             br.readLine();
             String[] nums = br.readLine().split("");
             Arrays.sort(nums, Collections.reverseOrder());
-            int num = Integer.parseInt(String.join("", Arrays.copyOfRange(nums, 0, nums.length - 1)));
-            System.out.println(num + Integer.parseInt(nums[nums.length - 1]));
+            long num = Long.parseLong(String.join("", Arrays.copyOfRange(nums, 0, nums.length - 1)));
+            System.out.println(num + Long.parseLong(nums[nums.length - 1]));
         }
     }
 }
