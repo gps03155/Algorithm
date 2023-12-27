@@ -11,16 +11,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[][] departments = new int[n][1000000];
 
-        List<Integer> list = new ArrayList<>();
+        List<Long> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int num = Integer.parseInt(st.nextToken());
-            int sum = 0;
+            long sum = 0;
             for (int j = 0; j < num; j++) {
-                departments[i][j] = Integer.parseInt(st.nextToken());
-                sum += departments[i][j];
+                sum += Long.parseLong(st.nextToken());
             }
             list.add(sum);
         }
