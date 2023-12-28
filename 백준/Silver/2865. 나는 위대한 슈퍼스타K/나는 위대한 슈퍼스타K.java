@@ -29,6 +29,6 @@ public class Main {
             max += list.get(i).getValue();
         }
 
-        System.out.println(Math.round(max * 100) / 100.0);
+        System.out.println(Math.round(max * 100.0) / 100.0);
     }
 }
