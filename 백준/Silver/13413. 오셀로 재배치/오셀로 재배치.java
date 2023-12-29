@@ -25,22 +25,7 @@ public class Main {
                 }
             }
 
-            int result = 0;
-            while (white > 0 || black > 0) {
-                if (white > 0 && black > 0) {
-                    result++;
-                    white--;
-                    black--;
-                } else if (white > 0) {
-                    result++;
-                    white--;
-                } else if (black > 0) {
-                    result++;
-                    black--;
-                }
-            }
-
-            System.out.println(result);
+            System.out.println(Math.max(white, black));
         }
     }
 }
