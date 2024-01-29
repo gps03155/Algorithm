@@ -16,12 +16,6 @@ public class Main {
             map.put(fruit, map.getOrDefault(fruit, 0) + Integer.parseInt(st.nextToken()));
         }
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 5) {
-                System.out.println("YES");
-                return;
-            }
-        }
-        System.out.println("NO");
+        System.out.println(map.containsValue(5) ? "YES" : "NO");
     }
 }
