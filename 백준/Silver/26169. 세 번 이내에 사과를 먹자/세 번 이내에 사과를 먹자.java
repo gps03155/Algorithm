@@ -10,7 +10,7 @@ public class Main {
     private static void dfs(int x, int y, int move, int apple, boolean[][] visited) {
         visited[x][y] = true;
         if (arr[x][y] == 1) {
-            ++apple;
+            apple++;
         }
 
         if (move == 3) {
