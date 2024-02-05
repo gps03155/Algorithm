@@ -10,9 +10,16 @@ public class Main {
     static int n;
     static int[] dh = {-1, 1, 0, 0};
     static int[] dw = {0, 0, -1, 1};
+    static boolean isPass;
 
     public static void dfs(int x, int y) {
         visited[x][y] = true;
+
+        if (x == m - 1 && arr[x][y] == 0) {
+            isPass = true;
+            return;
+        }
+
         for (int i = 0; i < 4; i++) {
             int nh = x + dh[i];
             int nw = y + dw[i];
@@ -46,12 +53,6 @@ public class Main {
             }
         }
 
-        for (boolean b : visited[m - 1]) {
-            if (b) {
-                System.out.println("YES");
-                return;
-            }
-        }
-        System.out.println("NO");
+        System.out.println(isPass ? "YES" : "NO");
     }
 }
