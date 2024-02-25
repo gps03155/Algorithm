@@ -12,11 +12,8 @@ public class Main {
         List<Integer> list = new ArrayList<>();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int people = 1;
-        while (st.hasMoreTokens()) {
-            int a = Integer.parseInt(st.nextToken());
-            list.add(a, people);
-            people++;
+        for (int i = 1; i <= n; i++) {
+            list.add(Integer.parseInt(st.nextToken()), i);
         }
         StringBuilder sb = new StringBuilder();
         for (int i = list.size() - 1; i >= 0; i--) {
