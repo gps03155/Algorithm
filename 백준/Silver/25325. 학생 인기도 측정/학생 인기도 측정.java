@@ -22,14 +22,17 @@ public class Main {
             }
         }
 
-        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
-        list.sort(Map.Entry.<String, Integer>comparingByValue(Comparator.reverseOrder()).thenComparing(Map.Entry.comparingByKey()));
+//        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+//        list.sort(Map.Entry.<String, Integer>comparingByValue(Comparator.reverseOrder()).thenComparing(Map.Entry.comparingByKey()));
+
+        List<String> list = new ArrayList<>(map.keySet());
+        Collections.sort(list, (o1, o2) -> map.get(o2) - map.get(o1));
 
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, Integer> entry : list) {
-            sb.append(entry.getKey())
+        for (String key : list) {
+            sb.append(key)
               .append(" ")
-              .append(entry.getValue())
+              .append(map.get(key))
               .append("\n");
         }
         System.out.println(sb);
