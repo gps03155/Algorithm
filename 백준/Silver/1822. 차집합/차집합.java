@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -11,31 +13,8 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
 
-        Set<Long> aList = new HashSet<>();
-        Set<Long> bList = new HashSet<>();
+        Set<Long> aList = new TreeSet<>();
 
-        input(br, aList, bList);
-
-        List<Long> result = new ArrayList<>();
-        for (Long aLong : aList) {
-            if (!bList.contains(aLong)) {
-                result.add(aLong);
-            }
-        }
-        System.out.println(result.size());
-        if (!result.isEmpty()) {
-            Collections.sort(result);
-            StringBuilder sb = new StringBuilder();
-            for (Long r : result) {
-                sb.append(r).append(" ");
-            }
-            System.out.println(sb);
-        }
-
-    }
-
-    private static void input(BufferedReader br, Set<Long> aList, Set<Long> bList) throws IOException {
-        StringTokenizer st;
         st = new StringTokenizer(br.readLine());
         while (st.hasMoreTokens()) {
             aList.add(Long.parseLong(st.nextToken()));
@@ -43,7 +22,17 @@ public class Main {
 
         st = new StringTokenizer(br.readLine());
         while (st.hasMoreTokens()) {
-            bList.add(Long.parseLong(st.nextToken()));
+            aList.remove(Long.parseLong(st.nextToken()));
         }
+
+        System.out.println(aList.size());
+        if (!aList.isEmpty()) {
+            StringBuilder sb = new StringBuilder();
+            for (Long r : aList) {
+                sb.append(r).append(" ");
+            }
+            System.out.println(sb);
+        }
+
     }
 }
