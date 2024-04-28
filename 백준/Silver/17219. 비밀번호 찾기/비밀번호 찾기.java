@@ -10,18 +10,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
         Map<String, String> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            String[] inputs = br.readLine().split(" ");
-            map.put(inputs[0], inputs[1]);
+            st = new StringTokenizer(br.readLine());
+            map.put(st.nextToken(), st.nextToken());
         }
 
-        for (int i = 0; i < m; i++) {
-            System.out.println(map.get(br.readLine()));
+        StringBuilder sb = new StringBuilder();
+        while (m-- > 0) {
+            sb.append(map.get(br.readLine())).append("\n");
         }
+        System.out.println(sb);
     }
 }
