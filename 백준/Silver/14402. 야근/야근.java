@@ -6,9 +6,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main {
-
-    public static final int COUNT = 100000000;
-
+    
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -18,16 +16,19 @@ public class Main {
         while (n-- > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             String name = st.nextToken();
-            String record = st.nextToken();
+            String q = st.nextToken();
 
-            if ("+".equals(record)) {
-                map.put(name, map.getOrDefault(name, 0) + 1);
-            } else {
-                if (map.getOrDefault(name, 0) > 0) {
-                    map.put(name, map.getOrDefault(name, 0) - 1);
-                } else {
-                    count++;
-                }
+            switch (q) {
+                case "+":
+                    map.put(name, map.getOrDefault(name, 0) + 1);
+                    break;
+                default:
+                    if (map.getOrDefault(name, 0) > 0) {
+                        map.put(name, map.getOrDefault(name, 0) - 1);
+                    } else {
+                        count++;
+                    }
+                    break;
             }
         }
 
